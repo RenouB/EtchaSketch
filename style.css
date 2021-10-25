@@ -1,35 +1,40 @@
 * {font-family:Arial, Helvetica, sans-serif}
 
 html, body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    margin: 0px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.meta-main-container {
     margin: 20px 0px;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     width: 100%;
     align-items: center;
-
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-
 }
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+
 
 .main-container {
     display: flex;
     margin-top: 50px;
-    /* margin-bottom: 50px; */
+    margin-bottom: 50px;
     align-items: flex-start;
     justify-content: center;
     flex-direction: row;
@@ -40,6 +45,8 @@ html, body {
 }
 
 .page-title {
+    flex: 1;
+    justify-content: center;
     font-size: 60px;
     color: ivory;
     letter-spacing: 4px;
@@ -202,7 +209,7 @@ html, body {
     border-radius:8px;
   }
 
-  /* .footer {
+  .footer {
     flex: 0 0 auto;
     width: 100%;
     margin-top: auto;
@@ -211,13 +218,12 @@ html, body {
     background-color:rgb(45, 33, 130);
     color: seashell;
     text-align: center;
-  } */
+  }
 
   .footer {
-    background-color: #1F2937;
-    display: flex;
-    justify-content: center;
-    align-content: flex-end;
-    padding: 20px 0px;
+    flex: 1;
+    background-color: rgb(45, 33, 130);
+    
+    padding: 15px 0px;
     color: #E5E7EB;
 }
